@@ -116,7 +116,7 @@ void ViewEthernet(u_char* pktBuf)
 	{
 		printf("%.2x", ether->src_mac[i]);
 		fprintf(savefp, "%.2x", ether->src_mac[i]);
-		if (i < MAC_ADDR_LEN - 1) printf(":");
+		if (i < MAC_ADDR_LEN - 1) { printf(":"); fprintf(savefp, ":"); }
 	}
 
 	printf("  ->  DstMAC: ");
@@ -126,7 +126,7 @@ void ViewEthernet(u_char* pktBuf)
 	{
 		printf("%.2x", ether->dest_mac[i]);
 		fprintf(savefp, "%.2x", ether->dest_mac[i]);
-		if (i < MAC_ADDR_LEN - 1) printf(":");
+		if (i < MAC_ADDR_LEN - 1) { printf(":"); fprintf(savefp, ":"); }
 	}
 
 	printf("\nProtocol type: %#x\n", exchangeByteOrder(ether->type));
