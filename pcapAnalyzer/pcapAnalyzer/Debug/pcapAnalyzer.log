@@ -1,15 +1,17 @@
 ﻿  readfile.c
-c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(32): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(33): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: 'fopen' 선언을 참조하십시오.
-c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(68): warning C4090: '함수': 'const' 한정자가 서로 다릅니다.
 c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(69): warning C4090: '함수': 'const' 한정자가 서로 다릅니다.
-c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(166): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(70): warning C4090: '함수': 'const' 한정자가 서로 다릅니다.
+c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(93): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\time.h(505): note: 'localtime' 선언을 참조하십시오.
+c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(177): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
   c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1868): note: 'inet_ntoa' 선언을 참조하십시오.
-c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(167): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(178): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
   c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1868): note: 'inet_ntoa' 선언을 참조하십시오.
-c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(170): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(181): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
   c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1868): note: 'inet_ntoa' 선언을 참조하십시오.
-c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(179): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+c:\networkproject\pcapanalyzer\pcapanalyzer\pcapanalyzer\readfile.c(190): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
   c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1868): note: 'inet_ntoa' 선언을 참조하십시오.
   pcapAnalyzer.vcxproj -> C:\NetworkProject\pcapAnalyzer\pcapAnalyzer\Debug\pcapAnalyzer.exe
   pcapAnalyzer.vcxproj -> C:\NetworkProject\pcapAnalyzer\pcapAnalyzer\Debug\pcapAnalyzer.pdb (Full PDB)

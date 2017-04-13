@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <pcap.h>
+#include <time.h>
 
 #include "headerStructures.h"
 
@@ -20,7 +21,7 @@ void ViewIP(u_char* pktBuf);
 //void ViewARP(u_char* pktBuf);
 
 static u_int packetNumber = 1;
-static const char filepath[] = "myCapture.pcap";
+static const char filepath[] = "myCapture2.pcap";
 
 FILE *savefp;	// for save
 
@@ -29,7 +30,7 @@ int main()
 	pcap_t *fp;
 	char errbuf[PCAP_ERRBUF_SIZE];
 	
-	savefp = fopen("result.txt", "w");
+	savefp = fopen("result2.txt", "w");
 
 	/* Open the capture file */
 	if ((fp = pcap_open_offline(filepath,			// name of the device
@@ -85,12 +86,22 @@ void dispatcher_handler(u_char *temp1,
 
 void ViewPktHeader(struct pcap_pkthdr* header)
 {
+	time_t sec = header->ts.tv_sec;
+	struct tm* timeInfo;
+
+	//time(&sec);
+	timeInfo = localtime(&sec);
+
+	int cYear = timeInfo->tm_year + 1900;
+	int cMonth = timeInfo->tm_mon + 1;
 	/* print pkt timestamp and pkt len */
 	printf("===================PACKET HEADER===================\n");
+	printf("Arrival local time and date: %d년%d월%d일  %d:%d:%d.%d\n", cYear, cMonth, timeInfo->tm_mday, timeInfo->tm_hour, timeInfo->tm_min, timeInfo->tm_sec, header->ts.tv_usec);
 	printf("Timeval sec:%ld  Timeval usec:%ld  Length of this Packet:(%ld bytes)\n", header->ts.tv_sec, header->ts.tv_usec, header->len);
 	printf("====================PACKET DATA====================\n");
 
 	fprintf(savefp,"===================PACKET HEADER===================\n");
+	fprintf(savefp,"Arrival local time and date: %d년%d월%d일  %d:%d:%d.%d\n", cYear, cMonth, timeInfo->tm_mday, timeInfo->tm_hour, timeInfo->tm_min, timeInfo->tm_sec, header->ts.tv_usec);
 	fprintf(savefp,"Timeval sec:%ld  Timeval usec:%ld  Length of this Packet:(%ld bytes)\n", header->ts.tv_sec, header->ts.tv_usec, header->len);
 	fprintf(savefp,"====================PACKET DATA====================\n");
 
